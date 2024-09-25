@@ -6,7 +6,7 @@ export default function StudentInfo(){
   return (
         <div>
         <p>Ruben Macalma</p>
-        <Link class={linkStyle} href="https://github.com/RubyMacalma/cprg306-assignments">Rubens cprg306-assignments </Link>
+        <Link class={linkStyle} href="https://github.com/RubyMacalma/cprg306-assignment">Rubens cprg306-assignments </Link>
          </div>
     );
   }
