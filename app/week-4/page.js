@@ -5,7 +5,7 @@ export default function Page() {
     
 return (
       <main>
-        <newItem/>
+        <newItem>hi</newItem>
       </main>
     );
   }
