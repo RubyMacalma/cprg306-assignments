@@ -1,12 +1,10 @@
-
-import newItem from "./new-item";
+import NewItem from "./new-item";
 
 export default function Page () {
 
 return (
-      <main>
-        <h1>button</h1>
-        <newItem />
+      <main class= " flex justify-center w-full">
+        <NewItem></NewItem>
       </main>
     );
   }

@@ -1,18 +1,11 @@
+"use client";
 
 import { useState } from "react";
 
-export default function newItem(){
+export default function NewItem(){
     
-    let buttonStyles = "w-8 bg-blue-500 text white font-semibold rounded-lg shadow-md hover:bg-blue-700" 
-    "focus:outline-none focus:ring-blue-400 focus:ring-opacity-75";
-
-    if (quantity <= 1){
-        buttonStyles = "w-8 bg-blue-500 text white font-semibold rounded-lg shadow-md hover:bg-blue-700" 
-    "focus:outline-none focus:ring-2 focus:ring bg-gray-400 focus:ring-opacity-75 ml-1";
-    }
-
-    const[quantity,setQuantity] =useState(0);
-
+    const[quantity,setQuantity] = useState(1);
+    
     const increment = () => {
         if (quantity < 20){
             setQuantity(quantity + 1);
@@ -20,16 +13,25 @@ export default function newItem(){
     };
     const decrement = () => {
         if (quantity > 1){
-            setQuantity(quantity -1);
+            setQuantity(quantity - 1);
         }
     };
+
+    let buttonStyles = "w-8 bg-blue-500 text white font-semibold rounded-lg shadow-md hover:bg-blue-700" 
+    "focus:outline-none focus:ring-blue-400 focus:ring-opacity-75";
+
     
     return (
-        <div>
-        <p>{quantity}</p>
-        <button onClick={increment} className={buttonStyles}></button>
-        <button onClick={decrement} className={buttonStyles}></button>
+        <div class= "p-2 m-4 bg-white text-white w-36">
+        <div class= "flex justify-between"> 
+        <span class= "text-black">{quantity}</span>
+            <div>
+            <button onClick={increment} className={buttonStyles}>+</button>
+            <button onClick={decrement} className={buttonStyles}>-</button>
+            </div>
+        </div>
+        
         </div>
     );
-};
+}
 
