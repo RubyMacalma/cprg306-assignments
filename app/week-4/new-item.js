@@ -1,6 +1,5 @@
-"use client";
 
-import { useState} from "react";
+import { useState } from "react";
 
 export default function newItem(){
     
@@ -32,5 +31,5 @@ export default function newItem(){
         <button onClick={decrement} className={buttonStyles}></button>
         </div>
     );
-}
+};
 
